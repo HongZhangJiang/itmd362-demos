@@ -46,3 +46,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Custom Site Styles */
+
+html {
+  background: blue;
+  padding: .625em; /* 10px @ 16px */
+}
+
+
+@media screen and (min-width: 37.5em) {
+  html {
+    font-size: 120%;
+    background: red;
+  }
+}
