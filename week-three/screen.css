@@ -48,3 +48,55 @@ table {
 }
 
 /* Custom Site Styles */
+
+/*
+    Based on a Minor Third (6:5) Ratio; see Modular Scale:
+    http://www.modularscale.com/?18&px&1.2&web&text
+*/
+
+body {
+  color: #222; /* Never quite true black */
+  background: #FAFAFA; /* A little grayer than true white */
+  font-size: 1.125em; /* 18px base font size */
+  line-height: 1.44em; /* 25.92px baseline grid */
+}
+
+h2 {
+  font-size: 2.074em; /* 37.325px */
+  line-height: 1.0437583893em; /* 38.88px grid (1.5 baselines) -> 51.84/37.325 = 1.0437583893em */
+  font-weight: bold;
+}
+
+p {
+  text-indent: 9.09090909%; /* Use one of 7-column grid to indent * */
+}
+
+h2 + p {
+  text-indent: 0; /* But don't indent at all on paragraphs immediately following h2 */
+}
+
+h2 + p::first-line {
+  font-variant: small-caps; /* This is ugly; with OpenType, we can make it better */
+}
+
+div#page {
+  margin: 1.728em 2.16em 1.44em 1.44em; /* Use 6:5 ratio w/ baseline grid for mobile-first margins */
+}
+
+
+@media screen and (min-width: 790px) { /* Leaving media query in pixels for class demo */
+  h1, h2 {
+    position: absolute; /* Pull headings out of the document flow */
+  }
+  h1 {
+    top: .72em; /* 12.96px = .5 gridlines 12.96/18px = */
+  }
+  h2 {
+    top: 3.4722036169em; /* 129.6px = 5 gridlines 129.6px/37.325px = 3.4722036169em */
+  }
+  div#page {
+    margin: 21.81818181% 27.27272727% 1.44em 18.18181818%;
+    /* Top margin makes for the 6:5 ratio of the left one-column margin */
+    /* 21.81818181 / 11 = 1.9834710736%
+  }
+}
