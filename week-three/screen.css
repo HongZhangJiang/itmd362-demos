@@ -79,7 +79,7 @@ h2 + p::first-line {
   font-variant: small-caps; /* This is ugly; with OpenType, we can make it better */
 }
 
-div#page {
+#page {
   margin: 1.728em 2.16em 1.44em 1.44em; /* Use 6:5 ratio w/ baseline grid for mobile-first margins */
 }
 
@@ -94,7 +94,7 @@ div#page {
   h2 {
     top: 3.4722036169em; /* 129.6px = 5 gridlines 129.6px/37.325px = 3.4722036169em */
   }
-  div#page {
+  #page {
     margin: 21.81818181% 27.27272727% 1.44em 18.18181818%;
     /* Top margin makes for the 6:5 ratio of the left one-column margin */
     /* 21.81818181 / 11 = 1.9834710736% */
