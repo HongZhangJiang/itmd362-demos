@@ -67,6 +67,10 @@ h2 {
   font-weight: bold;
 }
 
+cite {
+  font-style: italic;
+}
+
 p {
   text-indent: 9.09090909%; /* Use one of 7-column grid to indent * */
 }
