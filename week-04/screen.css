@@ -49,3 +49,63 @@ table {
 
 /* Custom Site Styles */
 
+/*
+  Use the text-size-adjust property
+  to prevent automatically inflating
+  text on orientation changes
+  (portrait to landscape on a phone,
+  for example):
+*/
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ie-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/*
+  Rather than hard-code something like
+  colons in a form's <label>, like
+  <label>Username:</label>, leave the
+  colons out and generate them with
+  CSS, if wanted:
+*/
+label:after {
+  content: ": ";
+}
+
+/*
+  For the mobile-first design, set all
+  form elements to be the full width of
+  the screen, and displayed as block-
+  level elements, not inline (default):
+*/
+input,textarea,label {
+  width: 100%;
+  display: block;
+}
+
+/* Put some space above the labels: */
+label {
+  margin-top: 1em;
+}
+
+/*
+  Now, make sure that we can add
+  padding (and border, if desired)
+  to form elements while maintaining
+  width: 100%; -- we do that with the
+  box-sizing property set to border-box.
+  See https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+*/
+input,textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+  background: #DDD;
+  font-size: inherit;
+  font-family: sans-serif;
+  padding: 1em;
+}
