@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="nojs">
 <head>
   <title>Hello, World</title>
   <meta charset="utf-8" />
@@ -14,6 +14,11 @@
     <input type="submit" id="submit" name="submit" value="Subscribe" />
   </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+(function($) {
+  $('html').removeClass('nojs').addClass('js');
+})(jQuery);
+</script>
 
 </body>
 </html>
