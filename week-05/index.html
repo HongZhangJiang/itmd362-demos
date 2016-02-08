@@ -7,16 +7,11 @@
   <link rel="stylesheet" href="screen.css" />
 </head>
 <body>
-  <form action="#" method="get" id="login">
-    <label for="username">Username</label>
-    <input type="text" id="username" maxlength="4" name="username" />
-    <label for="telephone">Telephone</label>
-    <input type="tel" id="telephone" name="telephone" />
-    <label for="biography">Biography</label>
-    <textarea id="biography"></textarea>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" />
-    <input type="submit" id="submit" name="Submit" />
+  <form action="#" method="get" id="signup">
+    <p>Subscribe to our newsletter!</p>
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" pattern="^.+@.+$" />
+    <input type="submit" id="submit" name="submit" value="Subscribe" />
   </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
