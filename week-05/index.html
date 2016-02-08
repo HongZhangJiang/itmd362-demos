@@ -17,6 +17,13 @@
 <script>
 (function($) {
   $('html').removeClass('nojs').addClass('js');
+  $('#email').keyup(function() {
+    var value = $(this).val();
+    var pattern = $(this).attr('pattern');
+    if(value.match(pattern)) {
+      $('#submit').addClass('active');
+    }
+  });
 })(jQuery);
 </script>
 
