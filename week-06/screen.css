@@ -71,5 +71,35 @@ h2 {
 img {
   display: block;
   max-width: 100%;
+  padding-bottom: 1.44em;
 }
-
+/* TODO: Change media query to em units */
+@media screen and (min-width: 650px) {
+  figure {
+    position: relative;
+  }
+  img {
+    width: 54.54545455%;
+    margin-left: 45.45454545%;
+  }
+  figcaption {
+    width: 45.45454545%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .flexbox figure {
+    position: static;
+    display: flex;
+  }
+  .flexbox img {
+    width: auto;
+    margin-left: 0;
+  }
+  .flexbox figcaption {
+    width: 0;
+    position: static;
+    top: auto;
+    left: auto;
+  }
+}
