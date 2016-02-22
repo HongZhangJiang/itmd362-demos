@@ -78,7 +78,7 @@ img {
   figure {
     position: relative;
   }
-  img {
+  .images {
     width: 54.54545455%;
     margin-left: 45.45454545%;
   }
@@ -91,15 +91,16 @@ img {
   .flexbox figure {
     position: static;
     display: flex;
+    flex-direction: row-reverse;
   }
-  .flexbox img {
+  .flexbox .images {
     width: auto;
-    margin-left: 0;
+    margin: 0;
+    flex-basis: 54.54545455%;
   }
   .flexbox figcaption {
-    width: 0;
     position: static;
-    top: auto;
-    left: auto;
+    width: auto;
+    flex-basis: 45.45454545%;
   }
 }
