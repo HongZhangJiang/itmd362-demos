@@ -90,17 +90,28 @@ img {
   }
   .flexbox figure {
     position: static;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
   .flexbox .images {
     width: auto;
     margin: 0;
-    flex-basis: 54.54545455%;
+    -webkit-flex-basis: 54.54545455%;
+        -ms-flex-preferred-size: 54.54545455%;
+            flex-basis: 54.54545455%;
   }
   .flexbox figcaption {
     position: static;
     width: auto;
-    flex-basis: 45.45454545%;
+    -webkit-flex-basis: 45.45454545%;
+        -ms-flex-preferred-size: 45.45454545%;
+            flex-basis: 45.45454545%;
   }
 }
