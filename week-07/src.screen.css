@@ -73,6 +73,10 @@ img {
   max-width: 100%;
   padding-bottom: 1.44em;
 }
+
+html.flexbox.debug {
+  border-top: 1em solid red;
+}
 /* TODO: Change media query to em units */
 @media screen and (min-width: 650px) {
   figure {
@@ -96,6 +100,7 @@ img {
   .flexbox .images {
     width: auto;
     margin: 0;
+    max-width: 54.54545455%;
     flex-basis: 54.54545455%;
   }
   .flexbox figcaption {
