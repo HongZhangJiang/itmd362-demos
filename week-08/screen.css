@@ -49,6 +49,26 @@ table {
 
 /* Custom Site Styles */
 
+img, video {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+audio {
+  display: block;
+  width: 100%;
+}
+
+.video {
+  background: #222;
+}
+.video figcaption {
+  color: #EEE;
+  margin: 0 auto;
+  max-width: 1077px;
+  padding: 1em;
+}
+
 html {
   padding: .625em; /* 10px @ 16px */
 }
