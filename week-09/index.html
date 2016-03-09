@@ -13,16 +13,15 @@
     <input type="email" id="email" name="email" placeholder="you@example.com" pattern="^.+@.+$" />
     <input type="submit" id="submit" name="submit" value="Subscribe" />
   </form>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="shoestring.js"></script>
 <script>
-jQuery.noConflict();
 (function($) {
   $('html').removeClass('nojs').addClass('js');
   $('#email').after('<a href="#null" id="jsubmit">Subscribe Now!</a>');
 
   $('#jsubmit').bind('click', function(e) {
     console.log("I, your browser, totally heard that click...");
-    $('#submit').trigger('click');
+    $('#signup').trigger('submit');
     e.preventDefault();
   });
 /*
@@ -34,7 +33,7 @@ jQuery.noConflict();
     }
   });
 */
-})(jQuery);
+})(shoestring);
 </script>
 
 </body>
