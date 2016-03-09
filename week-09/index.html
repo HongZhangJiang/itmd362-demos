@@ -15,8 +15,17 @@
   </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script>
+jQuery.noConflict();
 (function($) {
   $('html').removeClass('nojs').addClass('js');
+  $('#email').after('<a href="#null" id="jsubmit">Subscribe Now!</a>');
+
+  $('#jsubmit').bind('click', function(e) {
+    console.log("I, your browser, totally heard that click...");
+    $('#submit').trigger('click');
+    e.preventDefault();
+  });
+/*
   $('#email').keyup(function() {
     var value = $(this).val();
     var pattern = $(this).attr('pattern');
@@ -24,6 +33,7 @@
       $('#submit').addClass('active');
     }
   });
+*/
 })(jQuery);
 </script>
 
