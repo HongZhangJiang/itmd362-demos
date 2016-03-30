@@ -24,11 +24,11 @@
     $('#signup').trigger('submit');
     e.preventDefault();
   });
-  $('#email').keyup(function() {
+  $('#email').bind('keyup', function() {
     var value = $(this).val();
     var pattern = $(this).attr('pattern');
     if(value.match(pattern)) {
-      $('#submit').addClass('active');
+      $('#jsubmit').addClass('active');
     }
   });
 })(shoestring);
