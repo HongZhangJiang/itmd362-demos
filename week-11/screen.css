@@ -9,7 +9,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Base */
 
 html {
-  background-color: red;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.44em;
 }
@@ -18,43 +17,12 @@ body {}
 h1,h2,h3,h4 {
 }
 
-/* Layout */
-
-#header {}
-
-#footer {}
-
-#main {}
-
-/* Module */
-
-.comment {}
-
-.comment .author {}
-.comment .body {}
-.comment .likes {}
-
-.slideshow {}
-
-
-.illustration {}
-
-.photograph {}
-
-.videoplayer {}
-
-/* State */
-
-.js {}
-.nojs {}
-
-.js .is-visible {}
-.js .is-invalid {}
-.js .is-complete {}
-
-@media screen and (min-width: 33em) {
-/*Base*/
-/*Layout */
-/*Module*/
-/*State*/
+input,label {
+  display: block;
 }
+
+
+
+
+
+
