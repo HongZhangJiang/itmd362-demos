@@ -56,7 +56,7 @@ label {
   box-sizing property set to border-box.
   See https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 */
-input,textarea {
+input,textarea,#jsubmit {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -64,6 +64,7 @@ input,textarea {
   background: #DDD;
   font-size: inherit;
   font-family: sans-serif;
+  line-height: 1;
   padding: 1em;
 }
 /*
@@ -94,4 +95,21 @@ input,textarea {
 /* And set #email to 60% of the screen */
 .js #email {
   width: 60%;
+}
+
+/* Fancy UI Styles */
+
+.js #jsubmit {
+  visibility: hidden;
+  display: inline-block;
+  opacity: 0;
+  background: #FF0;
+  -moz-transition: opacity 2s, background 3s;
+  -webkit-transition: opacity 2s, background 3s;
+  transition: opacity 2s, background 3s;
+}
+.js #jsubmit.active {
+  visibility: visible;
+  background: #00F;
+  opacity: 1;
 }
