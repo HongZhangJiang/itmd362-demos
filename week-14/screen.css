@@ -117,3 +117,9 @@ input,textarea,#jsubmit {
   background: #00F;
   opacity: 1;
 }
+
+.js #warning {
+  font-weight: bold;
+  color: red;
+}
+

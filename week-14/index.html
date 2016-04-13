@@ -29,16 +29,33 @@
       $('#jsubmit').addClass('active');
     }
   });
-  
+
   // Function to handle what happens when a test user enters a password...
   $('#jsubmit').bind('click', function(e) {
-
-    // Write actual code here
-
+    $('#warning').remove();
+    if(fiftyFifty()) {
+    // send the user to the welcome screen
+      var siteHost = location.host;
+      location.href = siteHost + '/welcome.html';
+    } else {
+    // flash an error message on the form
+      $('#login h2').after('<div id="warning">Username/password not found.</div>');
+      $('#password').val('');
+    }
     e.preventDefault();
   });
-  
-  
+
+  var fiftyFifty = function() {
+    var myNum = Math.round(Math.random() * 10);
+    if (myNum % 2 == 0) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+
 })(shoestring);
 </script>
 
