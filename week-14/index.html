@@ -15,6 +15,7 @@
     <input type="password" id="password" name="password" />
     <input type="submit" id="submit" name="submit" value="Log In" />
   </form>
+
 <script src="shoestring.js"></script>
 <script>
 (function($) {
@@ -30,10 +31,12 @@
     }
   });
 
+
   // Function to handle what happens when a test user enters a password...
+  var hasFailed = false;
   $('#jsubmit').bind('click', function(e) {
     $('#warning').remove();
-    if(fiftyFifty()) {
+    if(fiftyFifty() || hasFailed) {
     // send the user to the welcome screen
       var siteHost = location.host;
       location.href = siteHost + '/welcome.html';
@@ -41,6 +44,7 @@
     // flash an error message on the form
       $('#login h2').after('<div id="warning">Username/password not found.</div>');
       $('#password').val('');
+      hasFailed = true;
     }
     e.preventDefault();
   });
