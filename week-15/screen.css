@@ -20,6 +20,11 @@ html {
   -ie-text-size-adjust: 100%;
   text-size-adjust: 100%;
   padding: 5%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+  font-size: 1.875em;
 }
 
 /*
@@ -44,9 +49,9 @@ input,textarea,label {
   display: block;
 }
 
-/* Put some space above the labels: */
+/* Put some space above and below the label: */
 label {
-  margin-top: 1em;
+  margin: 1.125em auto;
 }
 
 /*
@@ -81,22 +86,13 @@ input,textarea,#jsubmit {
   by the .js (JavaScript) utility class that
   jQuery adds to HTML:
 */
+.js #submit {
+  display: none; /* Hide the input#submit button */
+}
 .js #jsubmit.active, /* jQuery will add .active to #jsubmit (JavaScript-added button) */
 .js #email {
   /* The fancy-pants inline-block display style: */
   display: block;
-}
-/* When JavaScript is active, hide the #submit, and the #jsubmit button: */
-.js #submit,
-.js #jsubmit {
-  display: none;
-  /* But set the width to 30% for when we see it... */
-  width: 30%;
-}
-/* And set #email and #password to 60% of the screen */
-.js #email,
-.js #password {
-  width: 60%;
 }
 
 /* Fancy UI Styles */
@@ -112,6 +108,7 @@ input,textarea,#jsubmit {
   -moz-transition: opacity 1s, background 2s;
   -webkit-transition: opacity 1s, background 2s;
   transition: opacity 1s, background 2s;
+  text-align: center;
 }
 .js #jsubmit.active {
   visibility: visible;
@@ -124,3 +121,16 @@ input,textarea,#jsubmit {
   color: red;
 }
 
+@media screen and (min-width: 34.0625em) {
+  .js #submit,
+  .js #jsubmit {
+    /* Set the width to 30% for larger screens... */
+    width: 30%;
+  }
+  /* And set #email to 60% of the screen */
+  .js #email {
+    width: 60%;
+  }
+}
+
+/* A/B Testing Styles... */
