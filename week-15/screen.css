@@ -134,3 +134,8 @@ input,textarea,#jsubmit {
 }
 
 /* A/B Testing Styles... */
+
+.js.b #jsubmit.active {
+ background: #F00;
+}
+

@@ -12,6 +12,7 @@
     <label for="email">Email Address</label>
     <input type="email" id="email" name="email" placeholder="you@example.com" pattern="^.+@.+$" />
     <input type="submit" id="submit" name="submit" value="Subscribe" />
+    <input type="hidden" id="variant" name="variant" value="a,button-blue" />
   </form>
 <script src="shoestring.js"></script>
 <script>
@@ -19,7 +20,7 @@
   // Add JavaScript utility class
   $('html').removeClass('nojs').addClass('js');
   // Add an <a>-based submit/log in button
-  $('#email').after('<a href="#null" id="jsubmit">Subscribe Now!</a>');
+  $('#email').after('<a href="#null" class="active" id="jsubmit">Subscribe Now!</a>');
   // Only show the submit button once there's at least 2 characters in password
   $('#email').bind('keyup', function() {
     var value = $(this).val();
@@ -38,6 +39,12 @@
     else {
       return false;
     }
+  }
+
+  if(fiftyFifty()) {
+    $('html').addClass('b');
+    $('#variant').val('b,button-red');
+    console.log('B test!');
   }
 
 })(shoestring);
