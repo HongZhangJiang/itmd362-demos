@@ -1,0 +1,25 @@
+$primaryColor: #FFF;
+
+@mixin toEms($target,$context) {
+  font-size: $target/$context * 1em;
+}
+html {
+  color: darken($primaryColor,.5);
+  @include toEms(23px,16px);
+}
+
+h1 {
+  @include toEms(32px,23px);
+}
+
+nav {
+  background: $primaryColor;
+  .something {
+    color: white;
+  }
+  .sidebar & {
+    background: lighten($primaryColor,.2);
+  }
+}
+
+
